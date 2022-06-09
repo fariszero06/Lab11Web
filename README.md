@@ -29,7 +29,7 @@ pesan kesalahan seperti berikut:
 
 Semua jenis error akan ditampilkan sama. Untuk memudahkan mengetahui jenis 
 errornya, maka perlu diaktifkan mode debugging dengan mengubah nilai konfigurasi 
-pada environment variable CI_ENVIRINMENT menjadi development.
+pada environment variable CI_ENVIRINMENT menjadi development.<br>
 ![configurasi_ci](screenshot/configurasi_ci.png)<br>
 
 Ubah nama file env menjadi .env kemudian buka file tersebut dan ubah nilai variable 
@@ -52,7 +52,24 @@ class Home extends BaseController
 }
 
 ```
+## Routing dan Controller
+Routing merupakan proses yang mengatur arah atau rute dari request untuk menentukan 
+fungsi/bagian mana yang akan memproses request tersebut. Pada framework CI4, 
+routing bertujuan untuk menentukan Controller mana yang harus merespon sebuah 
+request. Controller adalah class atau script yang bertanggung jawab merespon sebuah 
+request.
+Pada Codeigniter, request yang diterima oleh file index.php akan diarahkan ke Router 
+untuk meudian oleh router tesebut diarahkan ke Controller.<br>
+![routes](screenshot/routes.png)<br>
 
-
-
+## Membuat Route Baru.
+Tambahkan kode berikut di dalam Routes.php
+```php
+$routes->get('/about', 'Page::about');
+$routes->get('/contact', 'Page::contact');
+$routes->get('/faqs', 'Page::faqs');
+```
+Untuk mengetahui route yang ditambahkan sudah benar, buka CLI dan jalankan perintah berikut:<br>
+php spark routes<br>
+![php_routes](screenshot/php_routes.png)<br>
 
