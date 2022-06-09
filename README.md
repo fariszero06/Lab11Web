@@ -145,8 +145,43 @@ halaman ini.'
  ]);
 }
 ```
+Kemudian lakukan refresh pada halaman tersebut<br>
+![halaman_about](screenshot/halaman_about.png)<br>
 
+## Membuat Layout Web dengan CSS
+Pada dasarnya layout web dengan css dapat diimplamentasikan dengan mudah pada 
+codeigniter. Yang perlu diketahui adalah, pada Codeigniter 4 file yang menyimpan asset 
+css dan javascript terletak pada direktori public. 
+Buat file css pada direktori public dengan nama style.css (copy file dari praktikum 
+lab4_layout. Kita akan gunakan layout yang pernah dibuat pada praktikum 4.<br>
+![css](screenshot/css.png)<br>
 
+Kemudian buat folder template pada direktori view kemudian buat file header.php dan 
+footer.php
+File app/view/template/header.php<br>
+```php
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title><?= $title; ?></title>
+ <link rel="stylesheet" href="<?= base_url('/style.css');?>">
+</head>
+<body>
+ <div id="container">
+ <header>
+ <h1>Layout Sederhana</h1>
+ </header>
+ <nav>
+ <a href="<?= base_url('/');?>" class="active">Home</a>
+ <a href="<?= base_url('/artikel');?>">Artikel</a>
+ <a href="<?= base_url('/about');?>">About</a>
+ <a href="<?= base_url('/contact');?>">Kontak</a>
+ </nav>
+ <section id="wrapper">
+ <section id="main">
+
+ ```
 
 
