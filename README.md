@@ -5,7 +5,7 @@
 
 ### Pengerjaan
 1. Buka xampp control lalu kalian klik start dan klik config lalu pilih PHP(php.ini)<br>
-![config](screensot/config.png)<br>
+![config](screenshot/config.png)<br>
 2. Lalu kalian hapus tanda (;) pada bagian extension=intl seperti berikut<br>
 ![extension](screenshot/extension.png)<br>
 3. Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu cara manual dan menggunakan composer. Pada praktikum ini kita menggunakan cara
