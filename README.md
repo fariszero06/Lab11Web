@@ -73,3 +73,80 @@ Untuk mengetahui route yang ditambahkan sudah benar, buka CLI dan jalankan perin
 php spark routes<br>
 ![php_routes](screenshot/php_routes.png)<br>
 
+Selanjutnya coba akses route yang telah dibuat dengan mengakses alamat url: http://localhost/lab11_ci/Lab11Web/ci4/public/about
+
+## Membuat Controller
+Selanjutnya adalah membuat Controller Page. Buat file baru dengan nama page.php 
+pada direktori Controller kemudian isi kodenya seperti berikut.<br>
+```php
+<?php
+namespace App\Controllers;
+class Page extends BaseController
+{
+ public function about()
+ {
+ echo "Ini halaman About";
+ }
+ public function contact()
+ {
+ echo "Ini halaman Contact";
+ }
+ public function faqs()
+ {
+ echo "Ini halaman FAQ";
+ }
+}
+```
+Selanjutnya refresh Kembali browser, maka akan ditampilkan hasilnya yaotu halaman 
+sudah dapat diakses.<br>
+![about](screenshot/about.png)<br>
+
+## Auto Routing
+Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status 
+autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true
+menjadi false.
+```php
+$routes->setAutoRoute(true);
+```
+Tambahkan method baru pada Controller Page seperti berikut.<br>
+```php
+public function tos()
+{
+ echo "ini halaman Term of Services";
+}
+```
+
+## Membuat View
+Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file 
+baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi 
+kodenya seperti berikut.<br>
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title><?= $title; ?></title>
+</head>
+<body>
+ <h1><?= $title; ?></h1>
+ <hr>
+ <p><?= $content; ?></p>
+</body>
+</html>
+```
+Ubah method about pada class Controller Page menjadi seperti berikut:<br>
+```php
+public function about()
+{
+ return view('about', [
+ 'title' => 'Halaman Abot',
+ 'content' => 'Ini adalah halaman abaut yang menjelaskan tentang isi 
+halaman ini.'
+ ]);
+}
+```
+
+
+
+
+
