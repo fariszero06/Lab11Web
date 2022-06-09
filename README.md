@@ -13,12 +13,12 @@ manual.
 - Unduh Codeigniter dari website https://codeigniter.com/download
 - Extrak file zip Codeigniter ke direktori htdocs/lab11_ci.
 - Ubah nama direktory framework-4.x.xx menjadi ci4.
-- Buka browser dengan alamat http://localhost/lab11_ci/ci4/public/
-![Foto](Foto/2.1.png)
+- Buka browser dengan alamat http://localhost/lab11_ci/Lab11Web/ci4/public/
+![ci4](screenshot/ci4.png)
 4. Kalian buka CMD dengan cara buka kembali xampp control lalu pilih bagian Shell, selanjutnya kalian tulis seperti dibawah ini<br>
-![Foto](Foto/3.1.png)<br>
+![xampp](screenshot/xampp.png)<br>
 5. Selanjutnya kalian tulis php spark maka akan muncul seperti dibawah ini<br>
-![Foto](Foto/3.2.png)<br>
+![php_spark](screenshot/php_spark.png)<br>
 6. Selanjutnya kita akan mengaktifkan fitur debugging untuk mengatahui pesan error, jika belum aktif maka tampilannya akan seperti dibawah ini<br>
 ![Foto](Foto/3.3.png)<br>
 7. Untuk mengaktifkannya kalian buka env ubah atau rename menjadi .env, lalu kalian hapus (#) pada CI_ENVIRONMENT dan ubah juga menjadi development seperti berikut<br>
